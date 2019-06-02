@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Clicked image</title>
+    <link rel="javascript" href="Javscript.js">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.9.0/d3.min.js"></script> -->
+    <style>
+      #seed{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      body{
+        background-color: rgb(199,172,111);
+      }
+      #message{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="seed"
+    src="https://www.kasandbox.org/programming-images/avatars/leafers-seed.png">
+    <div id="message">1</div>
+    <script type="text/javascript">
+      var seed = "https://www.kasandbox.org/programming-images/avatars/leafers-seed.png";
+      var seedling = "https://www.kasandbox.org/programming-images/avatars/leafers-seedling.png";
+      var sapling = "https://www.kasandbox.org/programming-images/avatars/leafers-sapling.png";
+      var tree = "https://www.kasandbox.org/programming-images/avatars/leafers-tree.png";
+
+      var currentScene = 1;
+
+      var drawScene1 = function(){
+        currentScene = 1;
+        document.getElementById("seed").src = seed;
+        document.body.style.backgroundColor = "rgb(199, 182, 121)";
+        document.getElementById("message").textContent = "1";
+      }
+      var drawScene2 = function(){
+        currentScene = 2;
+        document.getElementById("seed").src = seedling;
+        document.body.style.backgroundColor = "rgb(199, 192, 131)";
+        document.getElementById("message").textContent = "2";
+      }
+      var drawScene3 = function(){
+        currentScene = 3;
+        document.getElementById("seed").src = sapling;
+        document.body.style.backgroundColor = "rgb(199, 202, 141)";
+        document.getElementById("message").textContent = "3";
+      }
+      var drawScene4 = function(){
+        currentScene = 4;
+        document.getElementById("seed").src = tree;
+        document.body.style.backgroundColor = "rgb(199, 212, 151)";
+        document.getElementById("message").textContent = "4";
+      }
+
+      var face = document.getElementById("seed");
+      var onclick = function(e){
+        if (currentScene === 1) {
+          drawScene2();
+        }
+        else if (currentScene === 2) {
+          drawScene3();
+        }
+        else if (currentScene === 3) {
+          drawScene4();
+        }
+        else if (currentScene === 4) {
+          drawScene1();
+        }
+      };
+    </script>
+  </body>
+</html>
