@@ -21,7 +21,11 @@
   ol{
     font-family: 'Abril Fatface', cursive;
   }
-  #content{
-    margin-left: 15px;
-    margin-top: 15px;
+  .content{
+    margin-left: 25px;
+    margin-top: 25px;
   }
+
+.boxClicked{ width: 100px; height: 100px; background: red; margin: 10px;
+     transition: all 1s ease 0s;}
+.boxClicked:hover{ transform:rotate(45deg); background:blue;}
