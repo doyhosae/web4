@@ -1,0 +1,31 @@
+  #grid{
+    display:grid;
+    grid-template-columns: 300px 1fr;
+  }
+  body{
+    background-color: rgb(177, 76, 73);
+  }
+  h1{
+    text-align: center;
+    background-color: rgb(119, 20, 20);
+    padding: 30px;
+    color: rgb(240, 139, 20);
+  }
+  ol li:hover{
+    background-color: rgb(221, 155, 241);
+  }
+  li{
+    /* padding-left: 50px; */
+    margin-left: 10px;
+  }
+  ol{
+    font-family: 'Abril Fatface', cursive;
+  }
+  .content{
+    margin-left: 25px;
+    margin-top: 25px;
+  }
+
+.boxClicked{ width: 100px; height: 100px; background: red; margin: 10px;
+     transition: all 1s ease 0s;}
+.boxClicked:hover{ transform:rotate(45deg); background:blue;}
