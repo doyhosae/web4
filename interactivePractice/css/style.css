@@ -71,4 +71,18 @@ header { width:700px; height:100%; background:linear-gradient(-45deg, #e6fc55, #
                           0.8s;}
 #side .con p:nth-child(3) {bottom:50px; transform:translateX(200px); transition:all
                            1.2s;}
-#side:hover .con p { transform:translateX(0px);}                        
+#side:hover .con p { transform:translateX(0px);}
+
+/* 자동 롤링 버튼 */
+#side .btnContents{width:150px; height:50px; position:absolute; bottom:40px;
+                   left:100px; color:#b9fb05; transform:skewX(40deg);}
+#side:hover .btnContents { left:700px;}
+.btnContents i { font-size: 60px; position:absolute; bottom:0px; right:0px; opacity:0.5;}
+.btnContents i:nth-child(1) { animation:ani linear 1.5s 0s infinite; }
+.btnContents i:nth-child(2) { animation:ani linear 1.5s 0.5s infinite; }
+.btnContents i:nth-child(3) { animation:ani linear 1.5s 1.0s infinite; }
+
+@keyframes ani{
+  0%{right:0px; transform:scale(1); opacity:1;}
+  100%{right:100px; transform:scale(1.5); opacity:0;}
+}
