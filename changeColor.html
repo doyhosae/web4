@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>changeColor</title>
+    <style>
+      div{
+        width:150px;
+        height:150px;
+        margin: 50px auto;
+        background: rgb(42, 118, 166);
+      }
+      ul li{
+        font-size:30px;
+        margin-left:500px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <ul>
+      <li>red</li>
+      <li>blue</li>
+      <li>green</li>
+      <li>pink</li>
+    </ul>
+
+    <div></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $("li").on("click", function(){
+          var txt = $(this).text();      //클릭한 li의 text를 변수 txt에 저장
+          $("div").text(txt);          //변수 txt에 저장된 text를 div에 출력
+          $("div").css({"background":txt});
+        });
+      });
+    </script>
+
+  </body>
+</html>
